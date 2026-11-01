@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [vue(), tailwindcss()],
   server: {
     port: 3000,
+    host: true,   // 监听所有网卡，允许局域网/手机访问
     proxy: {
       '/api': {
         target: 'http://localhost:1455',
